@@ -23,9 +23,10 @@ const Hero = () => {
   };
 
   const arrowVariants = {
+    initial: { y: 0 },
     bounce: {
       y: [0, 26, 0],
-      transition: { delay: 3.4, duration: 2, repeat: Infinity },
+      transition: { delay: 3.4, duration: 2 },
     },
   };
 
@@ -34,7 +35,7 @@ const Hero = () => {
       <div className="flex h-full justify-center items-center">
         <div className="px-10">
           <motion.div
-            className="my-28 text-left"
+            className="my-16 md:my-28 text-left"
             variants={titleContainerVariants}
             initial="hidden"
             animate="show"
@@ -73,6 +74,7 @@ const Hero = () => {
             <motion.div
               style={{ scale: "130%" }}
               variants={arrowVariants}
+              initial="initial"
               animate="bounce"
             >
               <ArrowDown />
