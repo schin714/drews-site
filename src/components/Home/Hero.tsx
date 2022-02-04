@@ -17,10 +17,10 @@ const Hero = () => {
     show: { opacity: 1, y: 0, transition: { duration: 0.7 } },
   };
 
-  const arrowContainerVariants = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { duration: 0.8, delay: 3.5 } },
-  };
+  // const arrowContainerVariants = {
+  //   hidden: { opacity: 0 },
+  //   show: { opacity: 1, transition: { duration: 0.8, delay: 3.5 } },
+  // };
 
   const arrowVariants = {
     hidden: { y: 0 },
@@ -65,21 +65,21 @@ const Hero = () => {
               development.
             </motion.p>
           </motion.div>
-          <motion.div
-            className="w-full flex justify-center"
-            variants={arrowContainerVariants}
-            initial="hidden"
-            animate="show"
+          <div
+          // className="w-full flex justify-center"
+          // variants={arrowContainerVariants}
+          // initial="hidden"
+          // animate="show"
           >
             <motion.div
-              style={{ scale: "130%" }}
+              // style={{ scale: "130%" }}
               variants={arrowVariants}
               initial="hidden"
               animate="show"
             >
               <ArrowDown />
             </motion.div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>
