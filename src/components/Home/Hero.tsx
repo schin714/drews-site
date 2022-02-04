@@ -1,9 +1,7 @@
-import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import ArrowDown from "../Icons/ArrowDown";
 
 const Hero = () => {
-  const { scrollY } = useViewportScroll();
-
   const titleContainerVariants = {
     hidden: { opacity: 0 },
     show: {
@@ -17,14 +15,13 @@ const Hero = () => {
     show: { opacity: 1, y: 0, transition: { duration: 0.7 } },
   };
 
-  // const arrowContainerVariants = {
-  //   hidden: { opacity: 0 },
-  //   show: { opacity: 1, transition: { duration: 0.8, delay: 3.5 } },
-  // };
+  const arrowContainerVariants = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { duration: 0.8, delay: 3.5 } },
+  };
 
   const arrowVariants = {
-    hidden: { y: 0 },
-    show: {
+    bounce: {
       y: [0, 26, 0],
       transition: { duration: 2, repeat: Infinity },
     },
@@ -65,21 +62,16 @@ const Hero = () => {
               development.
             </motion.p>
           </motion.div>
-          <div
-          // className="w-full flex justify-center"
-          // variants={arrowContainerVariants}
-          // initial="hidden"
-          // animate="show"
+          <motion.div
+            className="w-full flex justify-center"
+            variants={arrowContainerVariants}
+            initial="hidden"
+            animate="show"
           >
-            <motion.div
-              style={{ scale: "130%" }}
-              variants={arrowVariants}
-              initial="hidden"
-              animate="show"
-            >
+            <motion.div variants={arrowVariants} animate="bounce">
               <ArrowDown />
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
