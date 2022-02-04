@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply font-ubuntu text-gray-300;
+}
+
+body {
+  @apply bg-ds-dark;
+}
+
+.px-narrow {
+  @apply px-10 lg:px-20;
+}
