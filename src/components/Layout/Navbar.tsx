@@ -20,16 +20,27 @@ const NavItem = ({ title }: NavItemProps) => {
 };
 
 const Navbar = () => {
-  const [navTextAnim, setNavTextAnim] = useState(60);
+  const [smallAnim, setSmallAnim] = useState(false);
 
   useEffect(() => {
     let viewportWidth = window.innerWidth;
     if (viewportWidth < 800) {
-      setNavTextAnim(20);
+      setSmallAnim(true);
     } else {
-      setNavTextAnim(60);
+      setSmallAnim(false);
     }
   }, []);
+
+  const navTextVariants = {
+    small: {
+      x: [0, 0],
+      y: [-50, 0],
+      opacity: [0, 1],
+      transition: { delay: 0.5, duration: 0.9 },
+    },
+    largeLeft: { x: [60, 0], opacity: [0, 1] },
+    largeRight: { x: [-60, 0], opacity: [0, 1] },
+  };
 
   return (
     <motion.nav
@@ -42,7 +53,8 @@ const Navbar = () => {
           <a>
             <motion.div
               className="text-xl font-medium leading-6"
-              animate={{ x: [navTextAnim, 0], opacity: [0, 1] }}
+              variants={navTextVariants}
+              animate={smallAnim ? "small" : "largeLeft"}
               transition={{ duration: 0.6, delay: 0.7 }}
             >
               <p>Drew</p>
@@ -52,7 +64,8 @@ const Navbar = () => {
         </Link>
         <motion.div
           className="flex gap-6"
-          animate={{ x: [-navTextAnim, 0], opacity: [0, 1] }}
+          variants={navTextVariants}
+          animate={smallAnim ? "small" : "largeRight"}
           transition={{ duration: 0.6, delay: 0.7 }}
         >
           <NavItem title="About" />
