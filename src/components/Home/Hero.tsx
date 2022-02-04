@@ -72,7 +72,7 @@ const Hero = () => {
           // animate="show"
           >
             <motion.div
-              // style={{ scale: "130%" }}
+              style={{ scale: "130%" }}
               variants={arrowVariants}
               initial="hidden"
               animate="show"
