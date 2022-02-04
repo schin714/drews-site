@@ -23,10 +23,10 @@ const Hero = () => {
   };
 
   const arrowVariants = {
-    initial: { y: 0 },
-    bounce: {
+    hidden: { y: 0 },
+    show: {
       y: [0, 26, 0],
-      transition: { delay: 3.4, duration: 2 },
+      transition: { duration: 2, repeat: Infinity },
     },
   };
 
@@ -74,8 +74,8 @@ const Hero = () => {
             <motion.div
               style={{ scale: "130%" }}
               variants={arrowVariants}
-              initial="initial"
-              animate="bounce"
+              initial="hidden"
+              animate="show"
             >
               <ArrowDown />
             </motion.div>
