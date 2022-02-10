@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <footer className="bg-ds-dark py-8 px-narrow">
-      <p className="text-white text-center">Property of Drew Schineller</p>
+    <footer className="px-narrow bg-ds-dark py-8">
+      <p className="text-center text-white">Property of Drew Schineller</p>
     </footer>
   );
 };

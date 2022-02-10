@@ -28,11 +28,11 @@ const Hero = () => {
   };
 
   return (
-    <div className="h-screen min-h-[750px]">
-      <div className="flex h-full justify-center items-center">
+    <div className="h-screen min-h-[600px]">
+      <div className="flex h-full items-center justify-center">
         <div className="px-10">
           <motion.div
-            className="my-16 md:my-28 text-left"
+            className="my-16 text-left md:my-28"
             variants={titleContainerVariants}
             initial="hidden"
             animate="show"
@@ -41,19 +41,19 @@ const Hero = () => {
               Hi, my name is
             </motion.p>
             <motion.p
-              className="text-5xl md:text-6xl font-medium"
+              className="text-5xl font-medium md:text-6xl"
               variants={titleVariants}
             >
               Drew Schineller
             </motion.p>
             <motion.p
-              className="text-3xl md:text-4xl font-medium text-gray-400"
+              className="text-3xl font-medium text-gray-400 md:text-4xl"
               variants={titleVariants}
             >
               I build interactive web experiences.
             </motion.p>
             <motion.p
-              className="mt-4 md:mt-6 max-w-md text-lg text-gray-400"
+              className="mt-4 max-w-md text-lg text-gray-400 md:mt-6"
               variants={titleVariants}
             >
               I&apos;m a software engineer focused on developing beautiful and
@@ -63,7 +63,7 @@ const Hero = () => {
             </motion.p>
           </motion.div>
           <motion.div
-            className="w-full flex justify-center"
+            className="flex w-full justify-center"
             variants={arrowContainerVariants}
             initial="hidden"
             animate="show"

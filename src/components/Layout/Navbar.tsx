@@ -11,7 +11,7 @@ const NavItem = ({ title }: NavItemProps) => {
   return (
     <div className="group">
       <Link href={"#" + title.toLowerCase()}>
-        <a className="group-hover:text-ds-accent transition-all duration-300">
+        <a className="text-base transition-all duration-300 group-hover:text-ds-accent">
           {title}
         </a>
       </Link>
@@ -44,11 +44,11 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="fixed z-40 w-full py-4 px-narrow bg-ds-dark/80 shadow-md backdrop-blur"
+      className="px-narrow fixed z-40 w-full bg-ds-dark/80 py-4 shadow-md backdrop-blur"
       animate={{ y: [-80, 0] }}
       transition={{ duration: 0.8 }}
     >
-      <div className="flex justify-between items-center">
+      <div className="flex items-center justify-between">
         <Link href="/">
           <a>
             <motion.div
