@@ -6,7 +6,7 @@ const Hero = () => {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      transition: { delayChildren: 1.4, staggerChildren: 0.3 },
+      transition: { delayChildren: 1.6, staggerChildren: 0.2 },
     },
   };
 
@@ -17,7 +17,7 @@ const Hero = () => {
 
   const arrowContainerVariants = {
     hidden: { opacity: 0 },
-    show: { opacity: 1, transition: { duration: 0.8, delay: 3.5 } },
+    show: { opacity: 1, transition: { duration: 0.8, delay: 3.7 } },
   };
 
   const arrowVariants = {
