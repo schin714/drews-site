@@ -28,21 +28,12 @@ const Hero = () => {
     },
   };
 
-  const circleVariants = {
-    down: {
-      scale: 0.9,
-    },
-    up: {
-      scale: 1.05,
-    },
-  };
-
   return (
     <div className="h-screen min-h-[600px] overflow-hidden">
       <div className="h-full">
-        <div className="px-narrow flex h-[90%] items-center justify-start">
+        <div className="px-wide flex h-full items-center justify-start md:px-36 lg:px-40">
           <motion.div
-            className="mb-20 text-left md:mb-0"
+            className="text-left"
             variants={titleContainerVariants}
             initial="hidden"
             animate="show"
@@ -51,19 +42,19 @@ const Hero = () => {
               Hi, my name is
             </motion.p>
             <motion.p
-              className="text-4xl font-medium md:text-5xl"
+              className="text-5xl font-medium md:text-6xl"
               variants={titleVariants}
             >
               Drew Schineller
             </motion.p>
             <motion.p
-              className="text-2xl font-medium text-gray-400 md:text-3xl"
+              className="text-4xl font-medium text-gray-400 md:text-5xl"
               variants={titleVariants}
             >
               I build interactive web experiences.
             </motion.p>
             <motion.p
-              className="mt-4 max-w-md text-lg text-gray-400 md:mt-4"
+              className="mt-4 max-w-lg text-lg text-gray-400 md:mt-4"
               variants={titleVariants}
             >
               I&apos;m a software engineer focused on developing beautiful and
@@ -83,48 +74,6 @@ const Hero = () => {
             <ArrowDown />
           </motion.div>
         </motion.div> */}
-      </div>
-      <div className="absolute -bottom-24 -right-10 scale-50 md:-bottom-32 md:-right-24 md:scale-90 lg:top-20 lg:-right-10 lg:scale-90 xl:right-20 xl:scale-100">
-        <motion.div
-          className="relative h-[550px] w-[440px]"
-          initial={{ y: 160, opacity: 0 }}
-          animate={{ y: 30, opacity: 1 }}
-          transition={{ duration: 1, delay: 2.2 }}
-        >
-          <motion.div
-            className=" let-0 absolute bottom-20"
-            variants={circleVariants}
-            initial={{ scale: 1 }}
-            drag
-            dragConstraints={{ top: 40, bottom: 40, left: 40, right: 40 }}
-            whileTap="down"
-            whileHover="up"
-          >
-            <Circle1 size="212" color="#1F8C93" />
-          </motion.div>
-          <motion.div
-            className=" absolute bottom-0 right-0"
-            variants={circleVariants}
-            initial={{ scale: 1 }}
-            drag
-            dragConstraints={{ top: 40, bottom: 40, left: 40, right: 40 }}
-            whileTap="down"
-            whileHover="up"
-          >
-            <Circle1 size="280" color="#41B8A6" />
-          </motion.div>
-          <motion.div
-            className="absolute top-0 left-0"
-            variants={circleVariants}
-            initial={{ scale: 1 }}
-            drag
-            dragConstraints={{ top: 40, bottom: 40, left: 40, right: 40 }}
-            whileTap="down"
-            whileHover="up"
-          >
-            <Circle1 size="347" color="#6CDBCA" />
-          </motion.div>
-        </motion.div>
       </div>
     </div>
   );
