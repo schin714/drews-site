@@ -10,6 +10,10 @@ body {
   @apply bg-ds-dark;
 }
 
-.px-narrow {
+.px-wide {
   @apply px-10 lg:px-20;
+}
+
+.px-narrow {
+  @apply px-20 lg:px-28 xl:px-36;
 }

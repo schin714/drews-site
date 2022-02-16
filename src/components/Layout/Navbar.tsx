@@ -49,7 +49,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="px-narrow fixed z-40 w-full bg-ds-dark/80 py-4 shadow-md backdrop-blur"
+      className="px-wide fixed z-40 w-full bg-ds-dark/80 py-4 shadow-md backdrop-blur"
       variants={navVariants}
       initial="hidden"
       animate="show"
@@ -73,12 +73,22 @@ const Navbar = () => {
             <NavItem title="Work" />
           </div>
 
-          <div
+          <motion.div
             className="block cursor-pointer md:hidden"
             onClick={() => setShowSidebar(true)}
+            variants={textVariants}
+            initial="hidden"
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: {
+                duration: 0.5,
+                delay: 0.9,
+              },
+            }}
           >
             <MenuIcon />
-          </div>
+          </motion.div>
         </div>
       </div>
       <div
@@ -87,7 +97,7 @@ const Navbar = () => {
           (showSidebar ? "block" : "hidden")
         }
       >
-        <div className="px-narrow absolute top-6 right-0">
+        <div className="px-wide absolute top-6 right-0">
           <div className="cursor-pointer" onClick={() => setShowSidebar(false)}>
             <X />
           </div>
