@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import ButtonLink from "../Common/ButtonLink";
 import ArrowDown from "../Icons/ArrowDown";
 import Circle1 from "../Icons/Circle1";
 
@@ -62,6 +63,9 @@ const Hero = () => {
               science, and I aim to be one of the best in full-stack
               development.
             </motion.p>
+            <motion.div className="mt-10" variants={titleVariants}>
+              <ButtonLink title="Call To Action" link="/" />
+            </motion.div>
           </motion.div>
         </div>
         {/* <motion.div
